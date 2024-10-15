@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'posts/contact.css' %}">
+{% endblock css %}
+{%block js%}<script src="{% static 'js/contact.js'%}"defer></script> {%endblock js%}
+
+{% block pagetitle %}Contact Us{% endblock pagetitle %}
+
+{% block body %}
+    <h1>Contact Us</h1>
+    <p>
+        If you have any questions, comments, or suggestions, feel free to reach out to us. 
+        You can contact us via the following methods:
+    </p>
+    <div class="contact-info">
+        <div class="contact-item" id="phone">+880 17* *** ****</div>
+        <div class="contact-item" id="email">nipa20farzana@gmail.com</div>
+    </div>
+    <p>
+        We look forward to hearing from you!
+    </p>
+{% endblock body %}

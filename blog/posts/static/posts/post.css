@@ -1,0 +1,33 @@
+* {
+    background-color: #333; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    color: #f9f9f9; 
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #e0e0e0; 
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px; 
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}

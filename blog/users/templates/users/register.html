@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'users/register.css' %}">
+{% endblock css %}
+{%block js%}<script src="{% static 'js/home.js'%}"defer></script> {%endblock js%}
+
+{% block pagetitle %}
+    Register a New User
+{% endblock pagetitle %}
+
+{% block body %}
+     <h1> Register a New User</h1>
+
+    <form class="form-with-validation" action= "{% url 'users:register' %}" method = "post">
+        {% csrf_token %}
+            <div class="form-fields">
+                {{ form.as_p }}
+            </div>
+        <button class="form-submit"> Submit</button>
+    </form>
+    
+
+
+{% endblock body %}

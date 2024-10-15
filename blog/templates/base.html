@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%block pagetitle%}
+        {%endblock pagetitle%}
+    </title>
+
+
+<link rel= "stylesheet" href="{% static 'style.css'%}">
+<script src="{% static 'home.js'%}"defer></script>
+
+{%block css%}  {%endblock css%}
+{%block js%} {%endblock js%}
+
+</head>
+<body>
+    <nav> 
+
+
+        
+            <a href="{% url 'posts:home' %}">Home</a>
+            <a href="{% url 'posts:about' %}">About</a>
+            <a href="{% url 'posts:blog' %}">Blog</a>
+            <a href="{% url 'posts:contact' %}">Contact Us</a>
+            <a href="{% url 'users:login' %}">Login</a>
+            <a href="{% url 'users:register' %}">Register</a>
+
+        
+
+
+   </nav>
+   
+    {% block body %}
+    {% endblock body %}
+
+
+<footer>
+        <p>&copy; 2024 Aluminium Blog. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'posts/about.css' %}">
+{% endblock css %}
+
+{%block js%}<script src="{% static 'js/about.js'%}"defer></script> {%endblock js%}
+{% block pagetitle %}About Us{% endblock pagetitle %}
+
+{% block body %}
+    <h1>About Us</h1>
+    <p>
+        Welcome to our blog! We are dedicated to providing information about aluminum companies in Bangladesh. 
+        Our aim is to showcase the best in the industry, share insights, and connect with those who are 
+        interested in aluminum products.
+    </p>
+    <p>
+        Whether you're looking for suppliers, industry news, or simply want to learn more about aluminum, 
+        you've come to the right place!
+    </p>
+{% endblock body %}

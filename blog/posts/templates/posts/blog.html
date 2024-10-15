@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'posts/home.css' %}">
+{% endblock css %}
+{%block js%}<script src="{% static 'js/home.js'%}"defer></script> {%endblock js%}
+
+{% block pagetitle %}
+    Home Page
+{% endblock pagetitle %}
+
+{% block body %}
+
+    
+    {% if posts %}
+        {% for post in posts %} 
+            <div>
+                <a href="{% url 'posts:post' post.id %}">
+                    <h2>{{ forloop.counter }} - {{ post.title }}</h2>
+                </a>
+                <p>{{ post.content|truncatewords:5 }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h1>No posts available</h1>
+    {% endif %}
+{% endblock body %}
