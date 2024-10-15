@@ -27,9 +27,10 @@ Steps:
 This project includes:
 
 1. Created Super user : Farzana
-2. APP posts shows all the blogs
-3. APP users manages registration,login, authentication etc 
-4. User login and aunthentication added.
+2. Managing blogs and users through django admin
+3. APP posts shows all the blogs
+4. APP users manages registration,login, logout etc 
+5. User login and aunthentication added.
 
  Under construction (more will be added soon)
 
