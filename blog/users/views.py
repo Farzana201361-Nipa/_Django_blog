@@ -15,13 +15,17 @@ def register(request):
 
     return render(request, "users/register.html", {"form": form})
 
+
+
+
 def login_view(request):
     
-    if request.method== "POST":
+    if request.method == "POST":
         form = AuthenticationForm(data= request.POST)
         if form.is_valid():
             user = form.get_user() 
             auth_login(request, user)
+            return redirect("posts:blog")
      
     else:
         form = AuthenticationForm()  
@@ -31,4 +35,4 @@ def login_view(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('users:login')
+    return redirect("users:login")

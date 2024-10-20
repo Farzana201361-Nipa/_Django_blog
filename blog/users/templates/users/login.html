@@ -12,7 +12,7 @@
 {% endblock pagetitle %}
 
 {% block body %}
-     <h1> User Login</h1>
+     <p> User Login Form</p>
     <form class="form-with-validation" action="{% url 'users:login' %}" method="post">
             {% csrf_token %}
             <div class="form-fields">
