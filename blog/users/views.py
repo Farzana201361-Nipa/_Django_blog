@@ -39,7 +39,10 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user() 
             auth_login(request, user)
-            return redirect("posts:blog")
+            if 'next' in request.POST:
+                return redirect(request.POST.get('next'))
+            else:
+                return redirect("posts:blog")
      
     else:
         form = AuthenticationForm()  
@@ -48,5 +51,7 @@ def login_view(request):
 
 
 def user_logout(request):
-    logout(request)
-    return redirect("users:login")
+    if request.method == "POST":
+        logout(request)
+        return redirect("posts:blog")
+        

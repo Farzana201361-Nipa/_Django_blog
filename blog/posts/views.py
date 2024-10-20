@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, Http404
 from django.urls import reverse
 from .models import Post
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 posts =[
@@ -81,6 +81,8 @@ def about(request):
 def contact(request):
     return render(request, 'posts/contact.html')  
 
-
-
+#redirects users to login url if they are not logged in
+@login_required(login_url='users:login')
+def post_new(request):
+    return render(request, 'posts/post_new.html')
 
