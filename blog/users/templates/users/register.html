@@ -14,14 +14,31 @@
 {% block body %}
      <h1> Register a New User</h1>
 
-    <form class="form-with-validation" action= "{% url 'users:register' %}" method = "post">
-        {% csrf_token %}
+
+        <form class="form-with-validation" action="{% url 'users:register' %}" method="post">
+            {% csrf_token %}
             <div class="form-fields">
                 {{ form.as_p }}
             </div>
-        <button class="form-submit"> Submit</button>
+    
+            {% if form.errors %}
+                <div class="error-message">
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                            <li><strong>{{ field }}:</strong> {{ errors|join:", " }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+    
+            <button class="form-submit" type="submit">Submit</button>
+
+
     </form>
     
 
 
 {% endblock body %}
+
+
+
