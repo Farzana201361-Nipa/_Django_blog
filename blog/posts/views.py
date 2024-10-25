@@ -25,7 +25,7 @@ posts =[
 
 def home(request):
 
-    return render(request,'posts/home.html',{'username': 'farzana'})
+    return render(request,'posts/home.html',{'username': 'Reader'})
 
 
 def blog(request):
@@ -73,7 +73,7 @@ def google(request,id):
     #Using reverse function to dynamically generate the urls
     url = reverse("post",args=[id])
     return HttpResponseRedirect(url)
-    # return HttpResponseRedirect(f'/posts/{id}/')
+    
     
 def about(request):
     return render(request, 'posts/about.html')
