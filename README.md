@@ -25,15 +25,17 @@ Steps:
 4. Run the server and explore the project.
 
  About this project:
+
+1. A dynamic blog application for bangladeshi aluminium company blogs using Django, enabling user registration, login, and secure access to posts.
+
+2. Integrated Django admin to facilitate blog post and user management.
+
+3. Implemented user authentication and session management to ensure secure login.
+
+4. Utilized login restrictions to ensure only logged-in users can create new posts or view certain pages.
+
+5. Shows price of aluminium items. **Under construction (more will be added soon)**
     
-       1. A dynamic blog application for bangladeshi aluminium company blogs using Django, enabling user registration, login, and secure access to posts.
-       2. Integrated Django admin to facilitate blog post and user management.
-       3. Implemented user authentication and session management to ensure secure login.
-       4. Utilized login restrictions to ensure only logged-in users can create new posts or view certain pages.
-       5. Shows price of aluminium items.
-
-   **Under construction (more will be added soon)**
-
 
 
 ---
