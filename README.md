@@ -24,15 +24,15 @@ Steps:
 3. Check wheather Django is installed or recognized in your virtual environment.
 4. Run the server and explore the project.
 
-This project includes:
+ About this project:
+    
+       1. A dynamic blog application for bangladeshi aluminium company blogs using Django, enabling user registration, login, and secure access to posts.
+       2. Integrated Django admin to facilitate blog post and user management.
+       3. Implemented user authentication and session management to ensure secure login.
+       4. Utilized login restrictions to ensure only logged-in users can create new posts or view certain pages.
+       5. Shows price of aluminium items.
 
-1. Created Super user : Farzana
-2. Managing blogs and users through django admin
-3. APP posts shows all the blogs
-4. APP users manages registration, login, logout etc 
-5. User login and aunthentication added.
-
- Under construction (more will be added soon)
+   **Under construction (more will be added soon)**
 
 
 
